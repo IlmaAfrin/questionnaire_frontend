@@ -1,0 +1,31 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" ng-controller='View1Ctrl'>
+	<div class="row">
+	    <br/>
+        <div class="panel panel-primary">
+             <div class="panel-heading">                  
+                  <pre>
+                    <p>{{question}}</p>                   
+                  </pre>
+             </div><!--.panel-heading-->
+        
+<div class = "panel-body">
+                
+    <div class="funkyradio" ng-repeat="option in options" for="{{option}}">
+        <div class="funkyradio-default"  >
+            <input type="radio" name="selectedOption"  ng-model='vm.selectedOption' ng-value="option"/>
+            <label for="radio">{{option}}</label>
+        </div>
+    </div>    
+        
+</div>
+<div class="panel-footer text-right">
+    <button type="button" id="btnSave" class="btn btn-default pull-right" ng-click="onClick(count); count = count+1;" ng-init="count=0">Next</button>
+ </div>
+</div>
+</div>
+</div>
